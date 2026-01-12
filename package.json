@@ -5,7 +5,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "NODE_OPTIONS='--max-old-space-size=4096' vitepress build",
+    "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
