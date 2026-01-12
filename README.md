@@ -19,7 +19,7 @@ Before submitting your pull request, please ensure:
 
 - **Check for existing content** - Verify the topic isn't already documented to avoid duplication
 - **Follow markdown standards** - Use proper indentation and formatting (consider installing a markdown linter)
-- **Use kebab-case filenames** - Name files using lowercase with hyphens (e.g., `create-custom-theme.md`)
+- **Use kebab-case filenames** - Name files using lowercase with hyphens (e.g., `checkout-component.md`)
 - **VitePress standards** - Use VitePress containers (`::: info`, `::: tip`, `::: warning`) for better presentation
 - **Code examples** - Include practical, working code examples when applicable
 - **Clear structure** - Use proper headings, lists, and sections for readability
