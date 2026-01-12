@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "NODE_OPTIONS='--max-old-space-size=4096' vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "file": "^0.2.2",
+    "fs": "^0.0.1-security",
+    "mermaid": "^11.12.2"
+  }
+}
