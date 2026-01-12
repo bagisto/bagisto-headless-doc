@@ -48,7 +48,7 @@ You'll need a running Bagisto instance with GraphQL enabled:
 
 ```bash
 # Clone the storefront repository
-git clone https://github.com/your-org/bagisto-headless.git
+git clone https://github.com/bagisto/nextjs-commerce
 
 # Enter the project directory
 cd bagisto-headless
