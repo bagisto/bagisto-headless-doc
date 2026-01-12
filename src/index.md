@@ -17,7 +17,7 @@ hero:
     alt: Bagisto
 
 features:
-  - title: NextJs Integration with Bagisto API
+  - title: Next.js Integration with Bagisto API
     details: Build high-performance, SEO-friendly storefronts with Bagisto's headless architecture using our Next.js commerce integration.
     icon: 📦
     link: /bagisto-headless-ecommerce/overview/introduction.md

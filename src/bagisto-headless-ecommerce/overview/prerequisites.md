@@ -18,9 +18,8 @@ node --version
 yarn --version
 ```
 
-### Git
-A version control system is required to clone the repository and manage your changes.
-- **Git:** Latest stable version.
+> [!NOTE]
+> **Git:** A version control system is required to clone the repository and manage your changes. Latest stable version is recommended.
 
 
 ## 2. Bagisto Backend Requirements

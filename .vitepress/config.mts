@@ -40,7 +40,7 @@ export default withMermaid(
 
       editLink: {
         pattern:
-          "https://github.com/bagisto/bagisto-headless-doc/edit/master/src/:path",
+          "https://github.com/bagisto/bagisto-headless-doc/edit/main/src/:path",
         text: "Help us improve this page on Github.",
       },
 
