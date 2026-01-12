@@ -13,7 +13,6 @@
       #0041ff 50%,
       #47caff 50%);
   --vp-home-hero-image-filter: blur(44px);
-  --vp-home-hero-name-font-size: 46px;
   --vp-sidebar-width: 308px;
 }
 
@@ -40,10 +39,16 @@
   scale: 1.2;
 }
 
-.VPHero .name {
-  font-size: 46px !important;
-  line-height: 1.2;
+.VPHero .image-container {
+  margin-top: 10px;
 }
+
+@media (min-width: 768px) {
+  .VPHero .image-container {
+    margin-top: 75px;
+  }
+}
+
 
 .container .items .item {
   width: 380px;
@@ -59,8 +64,8 @@
   margin-top: 80px;
 }
 
-@media (max-width: 525px){
-    .VPFeatures .items {
-      margin-top: 40px;
-    }
+@media (max-width: 525px) {
+  .VPFeatures .items {
+    margin-top: 40px;
   }
+}
