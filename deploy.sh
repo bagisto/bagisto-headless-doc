@@ -14,6 +14,6 @@ echo 'headless-doc.bagisto.com' > CNAME
 git init
 git add -A
 git commit -m 'chore: deploy docs to github'
-git push -f git@github.com:bagisto/bagisto-headless-doc.git
+git push -f git@github.com:bagisto/bagisto-headless-doc.git main
 
 cd -
