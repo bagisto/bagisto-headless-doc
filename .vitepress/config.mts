@@ -7,8 +7,9 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 export default withMermaid(
   defineConfig({
     lang: "en-US",
-    title: "Bagisto Headless Documentation",
-    description: "Comprehensive documentation for Bagisto Headless eCommerce, featuring GraphQL API, Next.js integration, and more.",
+    cleanUrls: true,
+    title: " ",
+    description: " ",
     ignoreDeadLinks: true,
     vite: {
       server: {
@@ -39,7 +40,7 @@ export default withMermaid(
 
       editLink: {
         pattern:
-          "https://github.com/bagisto/bagisto-docs/edit/master/src/:path",
+          "https://github.com/bagisto/bagisto-headless-doc/edit/master/src/:path",
         text: "Help us improve this page on Github.",
       },
 

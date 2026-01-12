@@ -18,7 +18,7 @@ Ensure your local machine has the following tools installed.
 ### Bagisto Backend Requirement
 You'll need a running Bagisto instance with GraphQL enabled:
 - **Demo API:** `https://demo.bagisto.com` (Great for quick testing).
-- **Self-Hosted:** Follow the [Bagisto Installation Guide](https://headless-doc.bagisto.com/getting-started/installation) for full control.
+- **Self-Hosted:** Follow the [Bagisto Installation Guide](https://devdocs.bagisto.com/getting-started/installation.html) for full control.
 
 ## Step 1: Clone & Navigate
 
