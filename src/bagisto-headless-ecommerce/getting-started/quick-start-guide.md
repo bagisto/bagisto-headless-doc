@@ -2,7 +2,29 @@
 
 Get your Bagisto Headless Next.js e-commerce store up and running in minutes! This guide will walk you through the essential steps to set up your development environment and start building.
 
-## Prerequisites
+## One-Command Setup (Recommended)
+
+The fastest way to get started is with our automated setup command:
+
+```bash
+npx -y @bagisto-headless/create your-storefront
+```
+
+This single command will:
+- ✅ Clone the repository
+- ✅ Install all dependencies automatically
+- ✅ Set up the environment configuration
+- ✅ Initialize your storefront
+
+Your store will be ready in just a few minutes!
+
+---
+
+## Manual Setup (Optional)
+
+If you prefer to set up your store manually or need more control over the installation process, follow these steps:
+
+### Prerequisites
 
 Ensure your local machine has the following tools installed.
 
@@ -16,11 +38,13 @@ Ensure your local machine has the following tools installed.
 > This project is optimized for **Yarn**. While `npm` is supported, we recommend Yarn for consistent dependency resolution.
 
 ### Bagisto Backend Requirement
+
 You'll need a running Bagisto instance with GraphQL enabled:
+
 - **Demo API:** `https://demo.bagisto.com` (Great for quick testing).
 - **Self-Hosted:** Follow the [Bagisto Installation Guide](https://devdocs.bagisto.com/getting-started/installation.html) for full control.
 
-## Step 1: Clone & Navigate
+### Step 1: Clone & Navigate
 
 ```bash
 # Clone the storefront repository
@@ -30,7 +54,7 @@ git clone https://github.com/your-org/bagisto-headless.git
 cd bagisto-headless
 ```
 
-## Step 2: Install Dependencies
+### Step 2: Install Dependencies
 
 ```bash
 # Using Yarn (Recommended)
@@ -42,8 +66,7 @@ npm install
 
 This installs the modern stack powering the store: **Next.js 16**, **React 19**, **Apollo Client**, **NextAuth.js**, and **Tailwind CSS**.
 
-
-## Step 3: Configure Environment
+### Step 3: Configure Environment
 
 ```bash
 # Initialize your environment file
@@ -68,8 +91,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 📖 **Full Reference:** [Environment Variables Guide](/bagisto-headless-ecommerce/getting-started/environment-variables.md)
 
-
-## Step 4: Fire Up the Store
+### Step 4: Fire Up the Store
 
 ```bash
 yarn dev
@@ -77,13 +99,13 @@ yarn dev
 
 The development server will start at **[http://localhost:3000](http://localhost:3000)**. 
 
+---
 
 ## Step 5: Verify the Setup
 
 1. **Homepage:** Open your browser and check if the products are loading from the API.
 2. **Cart:** Add a product to the cart to verify state management.
 3. **Login:** Try navigating to the login page to ensure auth routes are active.
-
 
 ## Project Structure at a Glance
 
@@ -96,7 +118,6 @@ src/
 └── store/        # State Management (Redux/Zustand)
 ```
 
-
 ## Common Dev Commands
 
 | Command | Action |
@@ -106,13 +127,11 @@ src/
 | `yarn lint` | Checks code for errors and styling issues. |
 | `yarn start` | Runs the production build locally. |
 
-
 ## Troubleshooting
 
 - **API Not Loading:** Check your CORS settings in the Bagisto backend and ensure the endpoint in `.env.local` is correct.
 - **Node Version Error:** Ensure you are using Node 18+ (Node 20+ is recommended).
 - **Port Conflict:** If port 3000 is taken, use `PORT=3001 yarn dev`.
-
 
 ## Next Steps
 
@@ -120,6 +139,5 @@ Explore the architecture and learn how to customize your storefront:
 
 🏗️ [Architecture Overview](/bagisto-headless-ecommerce/overview/architecture-overview.md)  
 🔐 [Authentication Guide](/bagisto-headless-ecommerce/authentication/nextauth-setup.md)  
-
 
 **Happy Coding!** 🚀 You're now ready to build a world-class e-commerce experience.
