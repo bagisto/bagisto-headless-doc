@@ -7,7 +7,7 @@ Welcome to the **[Bagisto Headless Commerce](https://bagisto.com/en/headless-eco
 
 Bagisto Headless is a modern architectural approach where the **presentation layer (frontend)** is completely decoupled from the **commerce engine (backend)**.
 
-- **Backend (Bagisto Core):** A robust Laravel-based engine that manages business logic, product catalogs, inventory, orders, and customer data.
+- **Bagisto Application Server:** The Bagisto Application Server is an API-first application that uses Swoole to run Laravel as a long-lived process, keeping the application in memory between requests. This reduces bootstrap overhead and improves performance for API-driven and headless commerce.
 - **Frontend (Next.js):** A flexible, high-performance UI layer that consumes data from the backend via a GraphQL API.
 
 > [!TIP]
@@ -29,13 +29,15 @@ In a headless ecosystem, the communication layer is vital. Bagisto utilizes **Gr
 
 ## 1.3 Why Next.js?
 
-Next.js is the chosen framework for the Bagisto Headless storefront because it provides production-ready features that are essential for successful e-commerce sites.
+Next.js is the industry standard for React-based commerce. By pairing it with Bagisto Headless, you gain:
 
 ### Key Features
 - **SSR & SSG:** Server-side rendering for checkout security and static generation for lightning-fast product pages.
 - **ISR (Incremental Static Regeneration):** Update product pages silently in the background when stock or prices change.
 - **Image Optimization:** Built-in tools to handle high-resolution product photography without sacrificing load times.
 - **SEO Ready:** Fully pre-rendered HTML for maximum visibility in search engine rankings.
+- **Developer Velocity:** Built-in TypeScript support and Fast Refresh.
+- **Secure Checkout:** Move sensitive logic to Server Actions to keep business rules off the client side.
 
 📖 **Learn more:** [Why Next.js?](/bagisto-headless-ecommerce/overview/why-nextjs.md)
 
@@ -48,7 +50,7 @@ The following diagram illustrates the high-level data flow between the systems:
 graph LR
     User([End User])
     NextJS["Next.js Storefront"]
-    GQL["GraphQL Gateway"]
+    GQL["GraphQL Gateway (with Swoole)"]
     Bagisto["Bagisto Backend"]
     
     User <--> NextJS
@@ -70,14 +72,13 @@ graph LR
 | **API Client** | GraphQL | Apollo Client / URQL |
 | **Styling** | Utility-First | Tailwind CSS |
 | **Backend** | PHP/Laravel | Bagisto Core |
-| **Schema** | SDL | Laravel |
-
+| **Server Runtime** | High-concurrency | PHP Swoole|
 
 ## 1.6 What You'll Learn
 
 This documentation is structured to take you from a fresh installation to a production-ready storefront:
 
-✅ **Setup:** Configure your development environment and connect to the API.  
+✅ **Set up your Environment:** Configure your development environment and connect to the API.  
 ✅ **Data Fetching:** Master GraphQL queries for complex catalog structures.  
 ✅ **Features:** Implement cart, checkout, customer accounts, and wishlists.  
 ✅ **State:** Manage user sessions and local cart state effectively.  
