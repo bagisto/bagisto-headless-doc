@@ -68,7 +68,7 @@ graph LR
 
 | Layer | Standard | Implementation |
 |-------|----------|----------------|
-| **Frontend** | React | Next.js 14+ (App Router) |
+| **Frontend** | React | Next.js 16+ (App Router) |
 | **API Client** | GraphQL | Apollo Client / URQL |
 | **Styling** | Utility-First | Tailwind CSS |
 | **Backend** | PHP/Laravel | Bagisto Core |
