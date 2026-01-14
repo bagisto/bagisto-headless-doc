@@ -16,7 +16,7 @@ Before you begin, ensure you have the following installed on your system:
 - MySQL 8.0.32 or higher
 - Web server (Apache/Nginx)
 
-## Step 1: Install Bagisto Engine
+### Step 1: Install Bagisto Engine
 
 Create a new Bagisto project using Composer:
 
@@ -30,7 +30,7 @@ php artisan serve
 
 📖 **Full Documentation:** [Bagisto Installation Guide](https://devdocs.bagisto.com/getting-started/installation.html)
 
-## Step 2: Install Bagisto API
+### Step 2: Install Bagisto API
 
 ```bash
 composer require bagisto/bagisto-api
@@ -41,7 +41,7 @@ php artisan bagisto-api:install
 
 📖 **API Documentation:** [Bagisto API Setup](https://api-docs.bagisto.com/api/setup.html)
 
-## Step 3: Install Headless Storefront
+### Step 3: Install Headless Storefront
 
 ```bash
 npx -y @bagisto-headless/create your-storefront
