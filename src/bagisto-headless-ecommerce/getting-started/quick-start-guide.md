@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Setup & Installation
 
 Get your Bagisto Headless Next.js e-commerce store up and running in minutes! This guide will walk you through the essential steps to set up your development environment and start building.
 
