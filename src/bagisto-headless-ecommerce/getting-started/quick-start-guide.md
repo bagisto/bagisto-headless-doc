@@ -2,7 +2,7 @@
 
 Get your Bagisto Headless Next.js e-commerce store up and running in minutes! This guide will walk you through the essential steps to set up your development environment and start building.
 
-## Three Step Setup (Recommended)
+## 3 Step installation (Recommended)
 
 Get started quickly with our automated installation process. Follow these three steps to set up Bagisto Headless Commerce.
 
