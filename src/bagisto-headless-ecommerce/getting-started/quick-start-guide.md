@@ -2,47 +2,84 @@
 
 Get your Bagisto Headless Next.js e-commerce store up and running in minutes! This guide will walk you through the essential steps to set up your development environment and start building.
 
-## One-Command Setup (Recommended)
+## Three Step Setup (Recommended)
 
-The fastest way to get started is with our automated setup command:
+Get started quickly with our automated installation process. Follow these three steps to set up Bagisto Headless Commerce.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- PHP 8.1 or higher
+- Composer 2.x
+- Node.js 16.x or higher
+- MySQL 5.7+ or MariaDB 10.3+
+
+
+## Step 1: Install Bagisto Engine
+
+Create a new Bagisto project using Composer:
+
+```bash
+composer create-project bagisto/bagisto my-bagisto-store
+
+php artisan bagisto:install
+
+php artisan serve
+```
+
+📖 **Full Documentation:** [Bagisto Installation Guide](https://devdocs.bagisto.com/getting-started/installation.html)
+
+## Step 2: Install Bagisto API
+
+```bash
+composer require bagisto/bagisto-api
+
+php artisan bagisto-api:install
+
+```
+
+📖 **API Documentation:** [Bagisto API Setup](https://api-docs.bagisto.com/api/setup.html)
+
+## Step 3: Install Headless Storefront
 
 ```bash
 npx -y @bagisto-headless/create your-storefront
 ```
-
-This single command will:
-- ✅ Clone the repository
-- ✅ Install all dependencies automatically
-- ✅ Set up the environment configuration
-- ✅ Initialize your storefront
-
 Your store will be ready in just a few minutes!
 
----
 
 ## Manual Setup (Optional)
 
 If you prefer to set up your store manually or need more control over the installation process, follow these steps:
 
-### Prerequisites
+### Bagisto Application Server Installation 
 
-Ensure your local machine has the following tools installed.
+```bash
+# install Bagisto Engine
+composer create-project bagisto/bagisto my-bagisto-store
 
-| Tool | Version | Purpose |
-| :--- | :--- | :--- |
-| **Node.js** | `v20.x` or higher | JavaScript Runtime |
-| **Yarn** | `v1.22.x` | Recommended Package Manager |
-| **Git** | Latest | Version Control |
+php artisan bagisto:install
+
+php artisan serve
+
+# Install Bagisto API
+composer require bagisto/bagisto-api
+
+php artisan bagisto-api:install
+```
 
 > [!TIP]
-> This project is optimized for **Yarn**. While `npm` is supported, we recommend Yarn for consistent dependency resolution.
+> **Documentation**
+>  
+> [Bagisto Installation Guide](https://devdocs.bagisto.com/getting-started/installation.html)  
+> [Bagisto API Setup](https://api-docs.bagisto.com/api/setup.html)
 
-### Bagisto Backend Requirement
 
-You'll need a running Bagisto instance with GraphQL enabled:
 
-- **Demo API:** `https://demo.bagisto.com` (Great for quick testing).
-- **Self-Hosted:** Follow the [Bagisto Installation Guide](https://devdocs.bagisto.com/getting-started/installation.html) for full control.
+
+
+## Storefront Installation
 
 ### Step 1: Clone & Navigate
 
@@ -63,6 +100,9 @@ yarn install
 # Or using npm
 npm install
 ```
+> [!TIP]
+> For best results, use **Yarn**.
+> `npm` will still work, but Yarn is preferred.
 
 This installs the modern stack powering the store: **Next.js 16**, **React 19**, **Apollo Client**, **NextAuth.js**, and **Tailwind CSS**.
 
