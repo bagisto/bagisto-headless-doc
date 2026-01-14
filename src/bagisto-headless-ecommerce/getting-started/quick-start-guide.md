@@ -10,11 +10,11 @@ Get started quickly with our automated installation process. Follow these three 
 
 Before you begin, ensure you have the following installed on your system:
 
-- PHP 8.1 or higher
-- Composer 2.x
+- PHP 8.2 or higher
+- Composer 2.5 or higher
 - Node.js 16.x or higher
-- MySQL 5.7+ or MariaDB 10.3+
-
+- MySQL 8.0.32 or higher
+- Web server (Apache/Nginx)
 
 ## Step 1: Install Bagisto Engine
 
