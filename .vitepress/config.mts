@@ -103,7 +103,7 @@ export default withMermaid(
               collapsed: false,
               items: [
                 {
-                  text: "Quick Start Guide",
+                  text: "Installation",
                   link: "/bagisto-headless-ecommerce/getting-started/quick-start-guide.md",
                 },
                 {
