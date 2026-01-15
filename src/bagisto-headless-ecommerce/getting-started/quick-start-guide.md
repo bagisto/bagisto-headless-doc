@@ -35,7 +35,7 @@ php artisan serve
 ```bash
 composer require bagisto/bagisto-api
 
-php artisan bagisto-api:install
+php artisan bagisto-api-platform:install
 
 ```
 
@@ -66,7 +66,7 @@ php artisan serve
 # Install Bagisto API
 composer require bagisto/bagisto-api
 
-php artisan bagisto-api:install
+php artisan bagisto-api-platform:install
 ```
 
 > [!TIP]
