@@ -950,85 +950,9 @@ export default withMermaid(
             {
               text: "Native App Integration",
               collapsed: true,
-              items: [
+              items: [                
                 {
-                  text: "Project URL Concept",
-                  link: "/bagisto-native/native-integration/project-url-concept.md",
-                  items: [
-                    {
-                      "text": "What is Project URL",
-                      "link": "/bagisto-native/native-integration/project-url-concept/what-is-project-url.md"
-                    },
-                    {
-                      "text": "Local vs Production URLs",
-                      "link": "/bagisto-native/native-integration/project-url-concept/local-vs-production-urls.md"
-                    },
-                    {
-                      "text": "Network Considerations",
-                      "link": "/bagisto-native/native-integration/project-url-concept/network-considerations.md"
-                    }
-                  ]
-                },
-                {
-                  text: "iOS App Setup",
-                  link: "/bagisto-native/native-integration/ios-app-setup.md",
-                  items: [
-                    {
-                      "text": "Repository Overview",
-                      "link": "/bagisto-native/native-integration/ios-app-setup/repository-overview.md"
-                    },
-                    {
-                      "text": "Project Structure",
-                      "link": "/bagisto-native/native-integration/ios-app-setup/project-structure.md"
-                    },
-                    {
-                      "text": "Xcode Setup",
-                      "link": "/bagisto-native/native-integration/ios-app-setup/xcode-setup.md"
-                    },
-                    {
-                      "text": "Simulator vs Device",
-                      "link": "/bagisto-native/native-integration/ios-app-setup/simulator-vs-device.md"
-                    }
-                  ]
-                },
-                {
-                  text: "Base URL Configuration",
-                  link: "/bagisto-native/native-integration/base-url-configuration.md",
-                  items: [
-                    {
-                      "text": "Where to Set",
-                      "link": "/bagisto-native/native-integration/configuring-base-url/where-to-set.md"
-                    },
-                    {
-                      "text": "Common Mistakes",
-                      "link": "/bagisto-native/native-integration/configuring-base-url/common-mistakes.md"
-                    },
-                    {
-                      "text": "Environment Switching",
-                      "link": "/bagisto-native/native-integration/configuring-base-url/environment-switching.md"
-                    }
-                  ]
-                },
-                {
-                  text: "Build & Run",
-                  link: "/bagisto-native/native-integration/build-and-run.md",
-                  items: [
-                    {
-                      "text": "First Launch Checklist",
-                      "link": "/bagisto-native/native-integration/build-and-run/first-launch-checklist.md"
-                    },
-                    {
-                      "text": "Verifying Native-Web Communication",
-                      "link": "/bagisto-native/native-integration/build-and-run/verifying-native-web-communication.md"
-                    },
-                    {
-                      "text": "Debugging Basics",
-                      "link": "/bagisto-native/native-integration/build-and-run/debugging-basics.md"
-                    }
-                  ]
-                },
-                {
-                  "text": "Bagisto Native Integration with IOS App",
+                  "text": "Integration with IOS App",
                   "link": "/bagisto-native/native-integration/bagisto-native-integration-with-ios-app.md"
                 },
               ],
