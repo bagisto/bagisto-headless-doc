@@ -29,6 +29,10 @@ features:
     details: Query exactly the data you need with a flexible GraphQL API. Optimized for modern frontend applications and mobile apps.
     icon: ⚛️
     link: https://api-docs.bagisto.com/api/graphql-api/introduction.html
+  - title: Bagisto Native App
+    details: Bagisto Native empowers you to turn your headless store into a fully native mobile App with API-first architecture.
+    icon: 📖
+    link: /bagisto-native/introduction/what-is-bagisto-native.md
   - title: Bagisto Developer Portal
     details: Access the core Bagisto developer resources, including package development, repositories, and service providers.
     icon: 🛠️
@@ -37,4 +41,5 @@ features:
     details: Find detailed documentation with examples to build amazing e-commerce experiences with Bagisto.
     icon: 📖
     link: https://docs.bagisto.com/
+
 ---
