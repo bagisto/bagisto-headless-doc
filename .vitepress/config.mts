@@ -957,30 +957,7 @@ export default withMermaid(
                 },
               ],
             },
-            // 10. Native Features
-            {
-              text: "Native Features Mapping",
-              collapsed: true,
-              items: [
-                {
-                  text: "Navigation Sync",
-                  link: "/bagisto-native/native-features-mapping/navigation-sync.md",
-                },
-                {
-                  text: "Cart Sync",
-                  link: "/bagisto-native/native-features-mapping/cart-sync.md",
-                },
-                {
-                  text: "Search Integration",
-                  link: "/bagisto-native/native-features-mapping/search-integration.md",
-                },
-                {
-                  text: "Advanced Native Features",
-                  link: "/bagisto-native/native-features-mapping/advanced-native-features.md",
-                },
-              ],
-            },
-            // 11. Advanced Guides
+            // 10. Advanced Guides
             {
               text: "Advanced Guides",
               collapsed: true,
@@ -1007,7 +984,7 @@ export default withMermaid(
                 },
               ],
             },
-            // 12. Multi-Frontend Strategy
+            // 11. Multi-Frontend Strategy
             {
               text: "Multi-Frontend Strategy",
               collapsed: true,
@@ -1044,7 +1021,7 @@ export default withMermaid(
                 },
               ],
             },
-            // 13. Deployment
+            // 12. Deployment
             {
               text: "Deployment & Environments",
               collapsed: true,

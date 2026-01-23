@@ -52,39 +52,105 @@ Payment methods are displayed using an accessible radio group. Each option inclu
 
 Once a user selects a method and clicks "Pay Now", the selection is persisted to the Bagisto backend.
 
+
 ### GraphQL Mutation
-The `CREATE_CHECKOUT_PAYMENT_METHODS` mutation handles the association between the cart and the selected gateway. It also accepts redirect URLs for online payments.
+The `CREATE_CHECKOUT_PAYMENT_METHODS` mutation now supports additional redirect URLs for handling third-party payment gateway flows, including success, failure, and cancel scenarios. The mutation signature and variable names have been updated to match the latest implementation.
 
 **File:** `src/graphql/checkout/mutations/CreateCheckoutPaymentMethod.ts`
 
 ```graphql
-mutation CreateCheckoutPaymentMethod($token: String!, $paymentMethod: String!) {
-  createCheckoutPaymentMethod(input: {
-    token: $token,
-    paymentMethod: $paymentMethod,
-    # Optional redirect URLs for external gateways
-    paymentSuccessUrl: "/success",
-    paymentFailureUrl: "/checkout?step=payment"
-  }) {
+mutation CreateCheckoutPaymentMethod(
+  $paymentMethod: String!
+  $successUrl: String
+  $failureUrl: String
+  $cancelUrl: String
+) {
+  createCheckoutPaymentMethod(
+    input: {
+      paymentMethod: $paymentMethod
+      paymentSuccessUrl: $successUrl
+      paymentFailureUrl: $failureUrl
+      paymentCancelUrl: $cancelUrl
+    }
+  ) {
     checkoutPaymentMethod {
       success
       message
-      paymentGatewayUrl # Provided if an external redirect is required
+      paymentGatewayUrl
+      paymentData
     }
   }
 }
 ```
 
-### Hook Implementation
-The `useCheckout` hook manages the submission and transitions the user to the final **Review** step.
 
-**File:** `src/utils/hooks/useCheckout.ts`
+### API Route Implementation
+The API route for saving the payment method constructs the redirect URLs dynamically using your app's base URL, and passes them to the mutation. This enables seamless integration with third-party payment gateways.
+
+**File:** `src/app/api/checkout/payment/route.ts`
+
+```typescript
+import { NextResponse } from "next/server";
+import { bagistoFetch } from "@/utils/bagisto";
+import { isBagistoError } from "@/utils/type-guards";
+import { CREATE_CHECKOUT_PAYMENT_METHODS } from "@/graphql";
+import { getAuthToken } from "@/utils/helper";
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const guestToken = getAuthToken(req);
+
+    const variables = {
+      paymentMethod: body.paymentMethod,
+      successUrl: `${process.env.NEXT_PUBLIC_APP_URL}/payment/success`,
+      failureUrl: `${process.env.NEXT_PUBLIC_APP_URL}/payment/failure`,
+      cancelUrl: `${process.env.NEXT_PUBLIC_APP_URL}/payment/cancel`
+    }
+
+    const res = await bagistoFetch<any>({
+      query: CREATE_CHECKOUT_PAYMENT_METHODS,
+      variables: variables as any,
+      cache: "no-store",
+      guestToken,
+    });
+
+    return NextResponse.json({ data: res?.body?.data }, { status: 200 });
+  } catch (error) {
+    if (isBagistoError(error)) {
+      return NextResponse.json(
+        {
+          data: { saveShipping: null },
+          error: { ...error.cause },
+        },
+        { status: 200 },
+      );
+    }
+
+    return NextResponse.json(
+      { error: "An unexpected error occurred." },
+      { status: 500 },
+    );
+  }
+}
+```
+
 
 
 ## 4. Navigation & Redirects
 
 - **Offline Methods:** For methods like "Cash on Delivery", the user is simply advanced to the `review` step.
 - **Online Gateways:** If the selected method requires external authorization (e.g., Stripe, PayPal), the API may return a `paymentGatewayUrl`. The storefront can then redirect the user to complete the transaction on the provider's secure page.
+
+### Third-Party Payment Gateway Redirection
+
+When integrating with third-party payment providers, you can specify custom redirect URLs for success, failure, and cancel events. These URLs are passed to the backend and used by the payment gateway to return the user to the appropriate page after the transaction.
+
+- **Success URL:** The user is redirected here after a successful payment (e.g., `/payment/success`).
+- **Failure URL:** The user is redirected here if the payment fails (e.g., `/payment/failure`).
+- **Cancel URL:** The user is redirected here if they cancel the payment process (e.g., `/payment/cancel`).
+
+This approach is similar to other modern e-commerce platforms and allows for flexible integration with a wide range of payment providers. You can customize these URLs to match your application's flow and user experience.
 
 
 

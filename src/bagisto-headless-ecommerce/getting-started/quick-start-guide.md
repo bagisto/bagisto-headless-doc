@@ -1,3 +1,4 @@
+
 # Setup & Installation
 
 Get your Bagisto Headless Next.js e-commerce store up and running in minutes! This guide will walk you through the essential steps to set up your development environment and start building.
@@ -37,7 +38,16 @@ composer require bagisto/bagisto-api
 
 php artisan bagisto-api-platform:install
 
+php artisan bagisto-api:generate-key --name="My App2" --rate-limit=null
+
 ```
+> [!NOTE]
+>
+> Running the command:
+>
+>     php artisan bagisto-api:generate-key --name="My App2" --rate-limit=null
+>
+> will create your storefront key with **unlimited rate limiting**. This means there will be no restrictions on the number of API requests your storefront can make.
 
 📖 **API Documentation:** [Bagisto API Setup](https://api-docs.bagisto.com/api/setup.html)
 
