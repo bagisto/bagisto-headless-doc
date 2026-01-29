@@ -629,5 +629,5 @@ if (BuildConfig.DEBUG) {
 ## Next Steps
 
 - Explore [Why WebView + Native Bridge](./why-webview-native-bridge.md)
-- Learn about [Packages](../packages/core-package.md)
-- Understand [Integrating Native Framework](../integrating-native-framework/installing-packages.md)
+- Learn about [Packages](../sdk-reference/core-package.md)
+- Understand [Integrating Native Framework](../integration-guide/installing-packages.md)

@@ -5,37 +5,59 @@ Bagisto Native provides a complete ecosystem for building native mobile applicat
 ## Architecture Overview
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#0f172a",
+    "primaryColor": "#1e293b",
+    "primaryTextColor": "#e2e8f0",
+    "primaryBorderColor": "#334155",
+    "lineColor": "#64748b",
+    "secondaryColor": "#0ea5e9",
+    "tertiaryColor": "#22c55e",
+    "fontSize": "16px"
+  },
+  "flowchart": {
+    "nodeSpacing": 50,
+    "rankSpacing": 70,
+    "padding": 20,
+    "useMaxWidth": false
+  }
+}}%%
+
 graph TB
-    subgraph "Backend Layer"
-        A[Bagisto Backend<br/>Laravel E-commerce Platform]
+
+    subgraph Backend["Backend Layer"]
+        A["<b>Any Backend Technology</b><br/><br/>REST / GraphQL / Custom APIs<br/><br/>Node.js • Python • PHP • Java • .NET • Go<br/>Firebase • Supabase"]
     end
     
-    subgraph "Frontend Layer"
-        B[Bagisto Headless<br/>Next.js Web Application]
+    subgraph Frontend["Frontend Layer"]
+        B["<b>Bagisto Headless</b><br/>Next.js Web Application"]
     end
     
-    subgraph "Bridge Layer"
-        C[Bagisto Native Framework<br/>@bagisto-native/core + @bagisto-native/react]
-        D[bundle.js<br/>Hotwire Web Components]
+    subgraph Bridge["Bridge Layer"]
+        C["<b>Bagisto Native Framework</b><br/>"]
+        D["<b>bundle.js</b><br/>Hotwire Web Components"]
     end
     
-    subgraph "Native Layer"
-        E[iOS App<br/>Turbo Native + Swift]
-        F[Android App<br/>Turbo Native + Kotlin]
+    subgraph Native["Native Layer"]
+        E["iOS App<br/>Turbo Native + Swift"]
+        F["Android App<br/>Turbo Native + Kotlin"]
     end
-    
-    A -->|REST/GraphQL APIs| B
+
+    A -->|REST / GraphQL APIs| B
     B -->|Integrates| C
     C -->|Provides| D
     D <-->|Bridge Communication| E
     D <-->|Bridge Communication| F
-    
-    style A fill:#ff6b6b
-    style B fill:#4ecdc4
-    style C fill:#45b7d1
-    style D fill:#96ceb4
-    style E fill:#ffeaa7
-    style F fill:#ffeaa7
+
+    %% Box Colors
+    style A fill:#7c3aed,stroke:#c4b5fd,color:#ffffff
+    style B fill:#0ea5e9,stroke:#7dd3fc,color:#001018
+    style C fill:#14b8a6,stroke:#99f6e4,color:#001018
+    style D fill:#22c55e,stroke:#bbf7d0,color:#001018
+    style E fill:#f59e0b,stroke:#fde68a,color:#1e293b
+    style F fill:#f59e0b,stroke:#fde68a,color:#1e293b
 ```
 
 ## Architecture Layers

@@ -8,8 +8,8 @@ export default withMermaid(
   defineConfig({
     lang: "en-US",
     cleanUrls: true,
-    title: " ",
-    description: " ",
+    title: "Bagisto Headless",
+    description: "Bagisto GraphQL API Integration with Next.js - Complete Developer Guide",
     ignoreDeadLinks: true,
     vite: {
       server: {
@@ -26,6 +26,7 @@ export default withMermaid(
     mermaid: {},
 
     themeConfig: {
+      siteTitle: false,
       logo: {
         light: "/logo.png",
         dark: "/logo.png",
@@ -462,7 +463,7 @@ export default withMermaid(
             }
           ],
         },
-         {
+        {
           text: "Bagisto Native Framework",
           collapsed: true,
           items: [
@@ -531,28 +532,6 @@ export default withMermaid(
                   link: "/bagisto-native/concepts-architecture/web-native-communication-flow.md",
                 },
                 {
-                  text: "Roles of Components",
-                  link: "/bagisto-native/concepts-architecture/roles-of-components.md",
-                  items: [
-                    {
-                      text: "Bagisto Backend",
-                      link: "/bagisto-native/concepts-architecture/role/bagisto-backend.md",
-                    },
-                    {
-                      text: "Bagisto Headless",
-                      link: "/bagisto-native/concepts-architecture/role/bagisto-headless.md",
-                    },
-                    {
-                      text: "Bagisto Native Framework",
-                      link: "/bagisto-native/concepts-architecture/role/bagisto-native-framework.md",
-                    },
-                    {
-                      text: "Native Apps (iOS / Android)",
-                      link: "/bagisto-native/concepts-architecture/role/native-apps.md",
-                    }
-                  ]
-                },
-                {
                   text: "Hotwire & Turbo Native",
                   link: "/bagisto-native/concepts-architecture/hotwire-turbo-native.md",
                 },
@@ -562,466 +541,488 @@ export default withMermaid(
                 },
               ],
             },
-            // 3. Packages
+
+            // 3. Integration Guide
             {
-              text: "Packages",
+              text: "Integration Guide",
               collapsed: true,
               items: [
                 {
-                  text: "@bagisto-native/core",
-                  link: "/bagisto-native/packages/core-package.md",
-                  items: [
-                    {
-                      text: "What it provides",
-                      link: "/bagisto-native/packages/bagisto-native-core/what-it-provides.md",
-                    },
-                    {
-                      text: "When to use",
-                      link: "/bagisto-native/packages/bagisto-native-core/when-to-use.md",
-                    }
-                  ]
+                  text: "Getting Started",
+                  link: "/bagisto-native/integration-guide/getting-started.md",
                 },
-                {
-                  text: "@bagisto-native/react",
-                  link: "/bagisto-native/packages/react-package.md",
-                  items: [
-                    {
-                      text: "React / Next.js wrappers",
-                      link: "/bagisto-native/packages/bagisto-native-react/react-nextjs-wrappers.md",
-                    },
-                    {
-                      text: "Relationship with core",
-                      link: "/bagisto-native/packages/bagisto-native-react/relationship-with-core.md",
-                    }
-                  ]
-                },
-                {
-                  text: "Versioning & Compatibility",
-                  link: "/bagisto-native/packages/versioning-compatibility.md",
-                },
-              ],
-            },
-            // 4. Prerequisites
-            {
-              text: "Prerequisites",
-              collapsed: true,
-              items: [
-                {
-                  text: "System Requirements",
-                  link: "/bagisto-native/prerequisites/system-requirements.md",
-                },
-                {
-                  text: "Node.js & npm",
-                  link: "/bagisto-native/prerequisites/node-npm.md",
-                },
-                {
-                  text: "Bagisto Backend Setup",
-                  link: "/bagisto-native/prerequisites/bagisto-backend-setup.md",
-                },
-                {
-                  text: "Headless Commerce Knowledge",
-                  link: "/bagisto-native/prerequisites/headless-knowledge.md",
-                },
-                {
-                  text: "iOS Requirements",
-                  link: "/bagisto-native/prerequisites/ios-requirements.md",
-                },
-                {
-                  text: "Network Requirements",
-                  link: "/bagisto-native/prerequisites/network-requirements.md",
-                },
-              ],
-            },
-            // 5. Getting Started
-            {
-              text: "Getting Started",
-              collapsed: true,
-              items: [
-                {
-                  text: "Overview of the Setup Flow",
-                  link: "/bagisto-native/getting-started/setup-flow-overview.md",
-                },
-                {
-                  text: "Create Bagisto Headless Commerce",
-                  link: "/bagisto-native/getting-started/create-headless-commerce.md",
-                  items: [
-                    {
-                      text: "Headless concept",
-                      link: "/bagisto-native/getting-started/create/headless-concept.md",
-                    },
-                    {
-                      text: "CLI command",
-                      link: "/bagisto-native/getting-started/create/cli-command.md",
-                    },
-                    {
-                      text: "Generated project structure",
-                      link: "/bagisto-native/getting-started/create/generate-project-structure.md",
-                    },
-                    {
-                      text: "Repository reference",
-                      link: "/bagisto-native/getting-started/create/repository-reference.md",
-                    }
-                  ]
-                },
-                {
-                  text: "Configure & Run Headless Storefront",
-                  link: "/bagisto-native/getting-started/configure-run-headless-storefront.md",
-                  items: [
-                    {
-                      text: "Environment variables",
-                      link: "/bagisto-native/getting-started/configure-and-run/environment-variables.md",
-                    },
-                    {
-                      text: "Development server",
-                      link: "/bagisto-native/getting-started/configure-and-run/development-server.md",
-                    },
-                    {
-                      text: "API connectivity check",
-                      link: "/bagisto-native/getting-started/configure-and-run/api-connectivity-check.md",
-                    }
-                  ]
-                },
-                {
-                  text: "Limitations & Common Pitfalls",
-                  link: "/bagisto-native/getting-started/limitations.md",
-                },
-              ],
-            },
-            // 6. Integrating Native Framework
-            {
-              text: "Integrating Native Framework",
-              collapsed: true,
-              items: [
                 {
                   text: "Installing Packages",
-                  link: "/bagisto-native/integrating-native-framework/installing-packages.md",
+                  collapsed: true,
+                  link: "/bagisto-native/integration-guide/installing-packages.md",
                   items: [
                     {
                       text: "Installing Core",
-                      link: "/bagisto-native/integrating-native-framework/installation/installing-core.md",
+                      link: "/bagisto-native/integration-guide/installation/installing-core.md",
                     },
                     {
                       text: "Installing React Wrappers",
-                      link: "/bagisto-native/integrating-native-framework/installation/installing-react-wrappers.md",
+                      link: "/bagisto-native/integration-guide/installation/installing-react-wrappers.md",
                     },
                     {
                       text: "Package Dependency Rules",
-                      link: "/bagisto-native/integrating-native-framework/installation/package-dependency-rules.md",
+                      link: "/bagisto-native/integration-guide/installation/package-dependency-rules.md",
                     },
                   ],
                 },
                 {
                   text: "Hotwire Bridge Bundle",
-                  link: "/bagisto-native/integrating-native-framework/hotwire-bridge-bundle.md",
+                  collapsed: true,
+                  link: "/bagisto-native/integration-guide/hotwire-bridge-bundle.md",
                   items: [
                     {
                       text: "What is bundle.js",
-                      link: "/bagisto-native/integrating-native-framework/hotwire-bridge-bundle/what-bundlejs-is.md",
+                      link: "/bagisto-native/integration-guide/hotwire-bridge-bundle/what-bundlejs-is.md",
                     },
                     {
                       text: "Why It Is Required",
-                      link: "/bagisto-native/integrating-native-framework/hotwire-bridge-bundle/why-it-is-required.md",
+                      link: "/bagisto-native/integration-guide/hotwire-bridge-bundle/why-it-is-required.md",
                     },
                     {
                       text: "How to Include It Safely",
-                      link: "/bagisto-native/integrating-native-framework/hotwire-bridge-bundle/how-to-include-it-safely.md",
+                      link: "/bagisto-native/integration-guide/hotwire-bridge-bundle/how-to-include-it-safely.md",
                     },
                     {
                       text: "Production vs Development Notes",
-                      link: "/bagisto-native/integrating-native-framework/hotwire-bridge-bundle/production-vs-development-notes.md",
+                      link: "/bagisto-native/integration-guide/hotwire-bridge-bundle/production-vs-development-notes.md",
                     },
                   ],
                 },
                 {
-                  text: "Making App Native-Ready",
-                  link: "/bagisto-native/integrating-native-framework/making-app-native-ready.md",
+                  text: "Implementing Native Behaviors",
+                  collapsed: true,
+                  link: "/bagisto-native/integration-guide/making-app-native-ready.md",
                   items: [
                     {
                       text: "Registering Bridge Components",
-                      link: "/bagisto-native/integrating-native-framework/native-ready/registering-bridge-components.md",
+                      link: "/bagisto-native/integration-guide/native-ready/registering-bridge-components.md",
                     },
                     {
                       text: "Enabling Native Events",
-                      link: "/bagisto-native/integrating-native-framework/native-ready/enabling-native-events.md",
+                      link: "/bagisto-native/integration-guide/native-ready/enabling-native-events.md",
                     },
                     {
                       text: "Native-safe Routing Rules",
-                      link: "/bagisto-native/integrating-native-framework/native-ready/native-safe-routing-rules.md",
+                      link: "/bagisto-native/integration-guide/native-ready/native-safe-routing-rules.md",
                     },
                     {
                       text: "SSR vs Client-side Considerations",
-                      link: "/bagisto-native/integrating-native-framework/native-ready/ssr-vs-client-side-considerations.md",
+                      link: "/bagisto-native/integration-guide/native-ready/ssr-vs-client-side-considerations.md",
                     },
                   ],
                 },
+                {
+                  text: "Quick Integration Note",
+                  link: "/bagisto-native/integration-guide/summary.md",
+                },
               ],
             },
-            // 7. Core Module
+
+            // 4. SDK Reference
             {
-              text: "@bagisto-native/core",
+              text: "SDK Reference",
               collapsed: true,
               items: [
                 {
-                  text: "Overview",
-                  link: "/bagisto-native/core-module/core-overview.md",
+                  text: "@bagisto-native/core",
+                  link: "/bagisto-native/sdk-reference/core-package.md",
+                  collapsed: true,
                   items: [
                     {
-                      text: "Purpose of Core Module",
-                      link: "/bagisto-native/core-module/overview/purpose-of-core-module.md",
+                      text: "What it provides",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-core/what-it-provides.md",
                     },
                     {
-                      text: "What Problems It Solves",
-                      link: "/bagisto-native/core-module/overview/what-problems-it-solves.md",
-                    },
-                  ],
-                },
-                {
-                  text: "Web Components",
-                  link: "/bagisto-native/core-module/web-components.md",
-                  items: [
-                    {
-                      text: "DynamicButton",
-                      link: "/bagisto-native/core-module/web-components/dynamic-button.md",
+                      text: "When to use",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-core/when-to-use.md",
                     },
                     {
-                      text: "HotwireToast",
-                      link: "/bagisto-native/core-module/web-components/hotwire-toast.md",
+                      text: "Overview",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-core/core-overview.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Purpose of Core Module",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/overview/purpose-of-core-module.md",
+                        },
+                        {
+                          text: "What Problems It Solves",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/overview/what-problems-it-solves.md",
+                        },
+                      ],
                     },
                     {
-                      text: "HotwireSearch",
-                      link: "/bagisto-native/core-module/web-components/hotwire-search.md",
+                      text: "Web Components",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "DynamicButton",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/dynamic-button.md",
+                        },
+                        {
+                          text: "HotwireToast",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/hotwire-toast.md",
+                        },
+                        {
+                          text: "HotwireSearch",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/hotwire-search.md",
+                        },
+                        {
+                          text: "HotwireLocation",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/hotwire-location.md",
+                        },
+                        {
+                          text: "HotwireHistorySync",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/hotwire-history-sync.md",
+                        },
+                        {
+                          text: "HotwireThemeMode",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/hotwire-theme-mode.md",
+                        },
+                        {
+                          text: "When to Use Directly vs React Wrappers",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/web-components/when-to-use-directly-vs-react-wrappers.md",
+                        },
+                      ],
                     },
                     {
-                      text: "HotwireLocation",
-                      link: "/bagisto-native/core-module/web-components/hotwire-location.md",
+                      text: "Utility Functions",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Toast Events",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions/toast-events.md",
+                        },
+                        {
+                          text: "History Sync",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions/history-sync.md",
+                        },
+                        {
+                          text: "Theme Sync",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions/theme-sync.md",
+                        },
+                        {
+                          text: "Cart Count Sync",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions/cart-count-sync.md",
+                        },
+                        {
+                          text: "Turbo Native Detection",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions/turbo-native-detection.md",
+                        },
+                        {
+                          text: "Server vs Client Usage",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/utility-functions/server-vs-client-usage.md",
+                        },
+                      ],
                     },
                     {
-                      text: "HotwireHistorySync",
-                      link: "/bagisto-native/core-module/web-components/hotwire-history-sync.md",
+                      text: "Best Practices",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-core/best-practices.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Performance",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/best-practices/performance.md",
+                        },
+                        {
+                          text: "Event Safety",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/best-practices/event-safety.md",
+                        },
+                        {
+                          text: "Avoiding Duplicate Native Actions",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-core/best-practices/avoiding-duplicate-native-actions.md",
+                        },
+                      ],
                     },
-                    {
-                      text: "HotwireThemeMode",
-                      link: "/bagisto-native/core-module/web-components/hotwire-theme-mode.md",
-                    },
-                    {
-                      text: "When to Use Directly vs React Wrappers",
-                      link: "/bagisto-native/core-module/web-components/when-to-use-directly-vs-react-wrappers.md",
-                    },
-                  ],
-                },
-                {
-                  text: "Utility Functions",
-                  link: "/bagisto-native/core-module/utility-functions.md",
-                  items: [
-                    {
-                      text: "Toast Events",
-                      link: "/bagisto-native/core-module/utility-functions/toast-events.md",
-                    },
-                    {
-                      text: "History Sync",
-                      link: "/bagisto-native/core-module/utility-functions/history-sync.md",
-                    },
-                    {
-                      text: "Theme Sync",
-                      link: "/bagisto-native/core-module/utility-functions/theme-sync.md",
-                    },
-                    {
-                      text: "Cart Count Sync",
-                      link: "/bagisto-native/core-module/utility-functions/cart-count-sync.md",
-                    },
-                    {
-                      text: "Turbo Native Detection",
-                      link: "/bagisto-native/core-module/utility-functions/turbo-native-detection.md",
-                    },
-                    {
-                      text: "Server vs Client Usage",
-                      link: "/bagisto-native/core-module/utility-functions/server-vs-client-usage.md",
-                    },
-                  ],
-                },
-                {
-                  text: "Best Practices",
-                  link: "/bagisto-native/core-module/best-practices.md",
-                  items: [
-                    {
-                      text: "Performance",
-                      link: "/bagisto-native/core-module/best-practices/performance.md",
-                    },
-                    {
-                      text: "Event Safety",
-                      link: "/bagisto-native/core-module/best-practices/event-safety.md",
-                    },
-                    {
-                      text: "Avoiding Duplicate Native Actions",
-                      link: "/bagisto-native/core-module/best-practices/avoiding-duplicate-native-actions.md",
-                    },
-                  ],
-                },
-              ],
-            },
-            // 8. React Module
-            {
-              text: "@bagisto-native/react",
-              collapsed: true,
-              items: [
-                {
-                  text: "Overview",
-                  link: "/bagisto-native/react-module/react-overview.md",
-                  items: [
-                    {
-                      text: "Why React Wrappers Exist",
-                      link: "/bagisto-native/react-module/overview/why-react-wrappers-exist.md",
-                    },
-                    {
-                      text: "Relationship with Core",
-                      link: "/bagisto-native/react-module/overview/relationship-with-core.md",
-                    },
-                  ],
-                },
-                {
-                  text: "Usage Rules",
-                  link: "/bagisto-native/react-module/usage-rules.md",
-                  items: [
-                    {
-                      text: "Client-only Components",
-                      link: "/bagisto-native/react-module/usage-rules/client-only-components.md",
-                    },
-                    {
-                      text: "Dynamic Imports",
-                      link: "/bagisto-native/react-module/usage-rules/dynamic-imports.md",
-                    },
-                    {
-                      text: "SSR Limitations",
-                      link: "/bagisto-native/react-module/usage-rules/ssr-limitations.md",
-                    },
-                  ],
-                },
-                {
-                  text: "Components Reference",
-                  link: "/bagisto-native/react-module/components-reference.md",
-                  items: [
-                    {
-                      text: "DynamicButton",
-                      link: "/bagisto-native/react-module/components-reference/dynamic-button.md",
-                    },
-                    {
-                      text: "HotwireToast",
-                      link: "/bagisto-native/react-module/components-reference/hotwire-toast.md",
-                    },
-                    {
-                      text: "HotwireSearch",
-                      link: "/bagisto-native/react-module/components-reference/hotwire-search.md",
-                    },
-                    {
-                      text: "HotwireLocation",
-                      link: "/bagisto-native/react-module/components-reference/hotwire-location.md",
-                    },
-                    {
-                      text: "HotwireHistorySync",
-                      link: "/bagisto-native/react-module/components-reference/hotwire-history-sync.md",
-                    },
-                    {
-                      text: "HotwireThemeMode",
-                      link: "/bagisto-native/react-module/components-reference/hotwire-theme-mode.md",
-                    },
-                  ],
-                },
-                {
-                  text: "Integration Patterns",
-                  link: "/bagisto-native/react-module/integration-patterns.md",
-                  items: [
-                    {
-                      text: "App-level Providers",
-                      link: "/bagisto-native/react-module/common-integration-patterns/app-level-providers.md",
-                    },
-                    {
-                      text: "Page-level Integration",
-                      link: "/bagisto-native/react-module/common-integration-patterns/page-level-integration.md",
-                    },
-                    {
-                      text: "Layout-level Integration",
-                      link: "/bagisto-native/react-module/common-integration-patterns/layout-level-integration.md",
-                    },
-                  ],
-                },
-              ],
-            },
-            // 9. Native Integration
-            {
-              text: "Native App Integration",
-              collapsed: true,
-              items: [                
-                {
-                  "text": "Integration with IOS App",
-                  "link": "/bagisto-native/native-integration/bagisto-native-integration-with-ios-app.md"
-                },
-              ],
-            },
-            // 10. Advanced Guides
-            {
-              text: "Advanced Guides",
-              collapsed: true,
-              items: [
-                {
-                  text: "Custom Bridge Components",
-                  link: "/bagisto-native/advanced-guides/custom-bridge-components.md",
-                },
-                {
-                  text: "Deep Linking",
-                  link: "/bagisto-native/advanced-guides/deep-linking.md",
-                },
-                {
-                  text: "Analytics & Tracking",
-                  link: "/bagisto-native/advanced-guides/analytics-tracking.md",
-                },
-                {
-                  text: "Authentication Flows",
-                  link: "/bagisto-native/advanced-guides/authentication-flows.md",
-                },
-                {
-                  text: "Checkout Edge Cases",
-                  link: "/bagisto-native/advanced-guides/checkout-edge-cases.md",
-                },
-              ],
-            },
-            // 11. Multi-Frontend Strategy
-            {
-              text: "Multi-Frontend Strategy",
-              collapsed: true,
-              items: [
-                {
-                  text: "Using with Next.js",
-                  link: "/bagisto-native/multi-frontend-strategy/nextjs-usage.md",
-                },
-                {
-                  text: "Using with React SPA",
-                  link: "/bagisto-native/multi-frontend-strategy/react-spa-usage.md",
-                },
-                {
-                  text: "Future Support",
-                  link: "/bagisto-native/multi-frontend-strategy/future-support.md",
-                  items: [
-                    {
-                      text: "Vue",
-                      link: "/bagisto-native/multi-frontend-strategy/future-support/vue.md",
-                    },
-                    {
-                      text: "Angular",
-                      link: "/bagisto-native/multi-frontend-strategy/future-support/angular.md",
-                    },
-                    {
-                      text: "Mobile-only apps",
-                      link: "/bagisto-native/multi-frontend-strategy/future-support/mobile-only-apps.md",
-                    }
                   ]
                 },
                 {
-                  text: "Shared API Strategy",
-                  link: "/bagisto-native/multi-frontend-strategy/shared-api-strategy.md",
+                  text: "@bagisto-native/react",
+                  link: "/bagisto-native/sdk-reference/react-package.md",
+                  collapsed: true,
+                  items: [
+                    {
+                      text: "React / Next.js wrappers",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-react/react-nextjs-wrappers.md",
+                    },
+                    {
+                      text: "Relationship with core",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-react/relationship-with-core.md",
+                    },
+                    {
+                      text: "Overview",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-react/react-overview.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Why React Wrappers Exist",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/overview/why-react-wrappers-exist.md",
+                        },
+                        {
+                          text: "Relationship with Core",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/overview/relationship-with-core.md",
+                        },
+                      ],
+                    },
+                    {
+                      text: "Usage Rules",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-react/usage-rules.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Client-only Components",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/usage-rules/client-only-components.md",
+                        },
+                        {
+                          text: "Dynamic Imports",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/usage-rules/dynamic-imports.md",
+                        },
+                        {
+                          text: "SSR Limitations",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/usage-rules/ssr-limitations.md",
+                        },
+                      ],
+                    },
+                    {
+                      text: "Components Reference",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "DynamicButton",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference/dynamic-button.md",
+                        },
+                        {
+                          text: "HotwireToast",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference/hotwire-toast.md",
+                        },
+                        {
+                          text: "HotwireSearch",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference/hotwire-search.md",
+                        },
+                        {
+                          text: "HotwireLocation",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference/hotwire-location.md",
+                        },
+                        {
+                          text: "HotwireHistorySync",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference/hotwire-history-sync.md",
+                        },
+                        {
+                          text: "HotwireThemeMode",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/components-reference/hotwire-theme-mode.md",
+                        },
+                      ],
+                    },
+                    {
+                      text: "Integration Patterns",
+                      link: "/bagisto-native/sdk-reference/bagisto-native-react/integration-patterns.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "App-level Providers",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/common-integration-patterns/app-level-providers.md",
+                        },
+                        {
+                          text: "Page-level Integration",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/common-integration-patterns/page-level-integration.md",
+                        },
+                        {
+                          text: "Layout-level Integration",
+                          link: "/bagisto-native/sdk-reference/bagisto-native-react/common-integration-patterns/layout-level-integration.md",
+                        },
+                      ],
+                    },
+                  ]
+                },
+                {
+                  text: "Versioning & Compatibility",
+                  link: "/bagisto-native/sdk-reference/versioning-compatibility.md",
                 },
               ],
             },
-            // 12. Deployment
+
+            // 5. Native Integration
+            {
+              text: "Mobile App Integration",
+              collapsed: true,
+              items: [
+                {
+                  text: "Integration with IOS App",
+                  collapsed: true,
+                  items: [
+                    { text: "Introduction", link: "/bagisto-native/native-integration/ios/introduction.md" },
+                    { text: "Hotwire vs. Native", link: "/bagisto-native/native-integration/ios/hotwire-vs-native.md" },
+                    { text: "Integration Guide", link: "/bagisto-native/native-integration/ios/index.md" },
+                    {
+                      text: "Project URL Concept",
+                      collapsed: true,
+                      items: [
+                        { text: "What is Project URL", link: "/bagisto-native/native-integration/ios/project-url-concept/what-is-project-url.md" },
+                        { text: "Local vs Production URLs", link: "/bagisto-native/native-integration/ios/project-url-concept/local-vs-production-urls.md" },
+                        { text: "Network Considerations", link: "/bagisto-native/native-integration/ios/project-url-concept/network-considerations.md" },
+                      ]
+                    },
+                    {
+                      text: "iOS App Setup",
+                      collapsed: true,
+                      items: [
+                        { text: "Repository Overview", link: "/bagisto-native/native-integration/ios/ios-app-setup/repository-overview.md" },
+                        { text: "Project Structure", link: "/bagisto-native/native-integration/ios/ios-app-setup/project-structure.md" },
+                        { text: "Xcode Setup", link: "/bagisto-native/native-integration/ios/ios-app-setup/xcode-setup.md" },
+                        { text: "Configuration Example", link: "/bagisto-native/native-integration/ios/ios-app-setup/configuration-example.md" },
+                        { text: "Simulator vs Device", link: "/bagisto-native/native-integration/ios/ios-app-setup/simulator-vs-device.md" },
+                      ]
+                    },
+                    {
+                      text: "Base URL Configuration",
+                      collapsed: true,
+                      items: [
+                        { text: "Where to Set", link: "/bagisto-native/native-integration/ios/base-url-configuration/where-to-set.md" },
+                        { text: "Common Mistakes", link: "/bagisto-native/native-integration/ios/base-url-configuration/common-mistakes.md" },
+                        { text: "Environment Switching", link: "/bagisto-native/native-integration/ios/base-url-configuration/environment-switching.md" },
+                      ]
+                    },
+                    {
+                      text: "Build & Run",
+                      collapsed: true,
+                      items: [
+                        { text: "How to Run", link: "/bagisto-native/native-integration/ios/build-and-run/how-to-run.md" },
+                        { text: "First Launch Checklist", link: "/bagisto-native/native-integration/ios/build-and-run/first-launch-checklist.md" },
+                        { text: "Verifying Native-Web Communication", link: "/bagisto-native/native-integration/ios/build-and-run/verifying-native-web-communication.md" },
+                        { text: "Debugging Basics", link: "/bagisto-native/native-integration/ios/build-and-run/debugging-basics.md" },
+                      ]
+                    },
+                    {
+                      text: "Bridge Components",
+                      collapsed: true,
+                      items: [
+                        { text: "Overview", link: "/bagisto-native/native-integration/ios/bridge-components/overview.md" },
+                        { text: "Component Registration", link: "/bagisto-native/native-integration/ios/bridge-components/registration.md" },
+                        {
+                          text: "Available Components",
+                          collapsed: true,
+                          items: [
+                            { text: "Overview", link: "/bagisto-native/native-integration/ios/bridge-components/available-components" },
+                            // { text: "Alert", link: "/bagisto-native/native-integration/ios/bridge-components/alert" },
+                            { text: "Barcode Scanner", link: "/bagisto-native/native-integration/ios/bridge-components/barcode-scanner.md" },
+                            // { text: "Button / NavBar", link: "/bagisto-native/native-integration/ios/bridge-components/button.md" },
+                            // { text: "Download File", link: "/bagisto-native/native-integration/ios/bridge-components/download-file.md" },
+                            // { text: "Form", link: "/bagisto-native/native-integration/ios/bridge-components/form.md" },
+                            // { text: "Haptic", link: "/bagisto-native/native-integration/ios/bridge-components/haptic.md" },
+                            { text: "Image Search", link: "/bagisto-native/native-integration/ios/bridge-components/image-search.md" },
+                            { text: "Location", link: "/bagisto-native/native-integration/ios/bridge-components/location.md" },
+                            // { text: "Menu / Drawer", link: "/bagisto-native/native-integration/ios/bridge-components/menu.md" },
+                            { text: "Navigation History", link: "/bagisto-native/native-integration/ios/bridge-components/navigation-history.md" },
+                            // { text: "Review Prompt", link: "/bagisto-native/native-integration/ios/bridge-components/review-prompt.md" },
+                            { text: "Search", link: "/bagisto-native/native-integration/ios/bridge-components/search.md" },
+                            { text: "Theme Sync", link: "/bagisto-native/native-integration/ios/bridge-components/theme.md" },
+                            { text: "Toast", link: "/bagisto-native/native-integration/ios/bridge-components/toast.md" },
+                            { text: "Dynamic Button", link: "/bagisto-native/native-integration/ios/bridge-components/custom-button-view.md" },
+                          ]
+                        },
+                      ],
+                    },
+                    {
+                      text: "How-to Guides",
+                      collapsed: true,
+                      items: [
+                        { text: "Install Xcode", link: "/bagisto-native/native-integration/ios/how-to-guides/install-xcode.md" },
+                        { text: "Create iOS Project", link: "/bagisto-native/native-integration/ios/how-to-guides/create-project.md" },
+                        { text: "Install SPM Package", link: "/bagisto-native/native-integration/ios/how-to-guides/install-spm-package.md" },
+                        { text: "Use SPM Package", link: "/bagisto-native/native-integration/ios/how-to-guides/use-spm-package.md" },
+                        { text: "Run iOS App", link: "/bagisto-native/native-integration/ios/how-to-guides/run-app.md" },
+                        { text: "Archive iOS App", link: "/bagisto-native/native-integration/ios/how-to-guides/archive-app.md" },
+                        { text: "Apple Account Setup", link: "/bagisto-native/native-integration/ios/how-to-guides/apple-account-setup.md" },
+                        { text: "Publish to App Store", link: "/bagisto-native/native-integration/ios/how-to-guides/publish-to-app-store.md" },
+                        { text: "Add Custom Component", link: "/bagisto-native/native-integration/ios/how-to-guides/add-new-component.md" },
+                      ]
+
+                    },
+                  ]
+                },
+              ],
+            },
+
+            // 6. How to Guides
+            {
+              text: "How to Guides",
+              collapsed: true,
+              items: [
+                {
+                  text: "Integration with Bagisto Headless",
+                  collapsed: false,
+                  items: [
+                    {
+                      text: "Overview of the Setup Flow",
+                      link: "/bagisto-native/getting-started/integration-with-bagisto-headless/setup-flow-overview.md",
+                    },
+                    {
+                      text: "Step 1: Install Bagisto Headless",
+                      link: "/bagisto-native/getting-started/integration-with-bagisto-headless/integrate-bagisto-native.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Headless concept",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/create/headless-concept.md",
+                        },
+                        {
+                          text: "CLI command",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/create/cli-command.md",
+                        },
+                        {
+                          text: "Generated project structure",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/create/generate-project-structure.md",
+                        },
+                        {
+                          text: "Repository reference",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/create/repository-reference.md",
+                        }
+                      ]
+                    },
+                    {
+                      text: "Step 2: API & Environment Configuration",
+                      link: "/bagisto-native/getting-started/integration-with-bagisto-headless/configure-run-headless-storefront.md",
+                      collapsed: true,
+                      items: [
+                        {
+                          text: "Environment variables",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/configure-and-run/environment-variables.md",
+                        },
+                        {
+                          text: "Development server",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/configure-and-run/development-server.md",
+                        },
+                        {
+                          text: "API connectivity check",
+                          link: "/bagisto-native/getting-started/integration-with-bagisto-headless/configure-and-run/api-connectivity-check.md",
+                        }
+                      ]
+                    },
+                    {
+                      text: "Step 3: Connect Bagisto Native",
+                      link: "/bagisto-native/getting-started/integration-with-bagisto-headless/step-3-connect-bagisto-native.md",
+                    },
+                    {
+                      text: "Step 4: Component & Bridge Integration",
+                      link: "/bagisto-native/getting-started/integration-with-bagisto-headless/component-integration-guide.md",
+                    },
+                    {
+                      text: "Limitations & Common Pitfalls",
+                      link: "/bagisto-native/getting-started/integration-with-bagisto-headless/limitations.md",
+                    },
+                  ]
+                },
+              ],
+            },
+            // 7. Deployment & Environments
             {
               text: "Deployment & Environments",
               collapsed: true,

@@ -1,4 +1,4 @@
-# Web → Native Bridge
+# Web to Native Bridge
 
 Bagisto Native creates a **seamless bridge** between your web application and native mobile functionality.
 

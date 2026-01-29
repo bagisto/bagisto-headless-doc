@@ -1,6 +1,8 @@
-# Web ↔ Native Communication Flow 🔁
+# Web to Native Communication Flow
 
-**Summary:** This document explains how Bagisto Native uses an event-driven bridge (Hotwire + Stimulus + native bridge) to enable safe, decoupled two-way communication between a web app and a native mobile app. It includes diagrams, code examples, event names, and a quick integration checklist.
+This document explains how Bagisto Native uses an event-driven bridge (Hotwire + Stimulus + native bridge) to enable safe, decoupled two-way communication between a web app and a native mobile app.
+
+It includes diagrams, code examples, event names, and a quick integration checklist.
 
 ---
 

@@ -1,4 +1,4 @@
-# Why WebView + Native Bridge
+# Why WebView and Native Bridge
 
 Understanding the architectural decision behind Bagisto Native: why we chose WebView + Native Bridge (Turbo Native) approach instead of traditional hybrid apps or fully native apps.
 
@@ -655,6 +655,6 @@ It's the **pragmatic choice** for modern e-commerce and content-driven applicati
 - [Migration Guides](https://discuss.hotwired.dev/)
 ## Next Steps
 
-- Learn about [Packages](../packages/core-package.md)
-- Understand [Integrating Native Framework](../integrating-native-framework/installing-packages.md)
-- Explore [Core Module](../core-module/core-overview.md)
+- Learn about [Packages](../sdk-reference/core-package.md)
+- Understand [Integrating Native Framework](../integration-guide/installing-packages.md)
+- Explore [Core Module](../sdk-reference/bagisto-native-core/core-overview.md)

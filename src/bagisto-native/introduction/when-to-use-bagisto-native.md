@@ -30,11 +30,6 @@
 - Want easier maintenance and updates
 - Need consistent user experience on web and mobile
 
-## You're Using Hotwire Technology
-
-- Already familiar with or using Hotwire/Turbo
-- Want to leverage Hotwire's native bridge capabilities
-- Prefer progressive enhancement approach
 ## Next Steps
 
 - Learn about [Supported Ecosystems](./supported-ecosystems.md)

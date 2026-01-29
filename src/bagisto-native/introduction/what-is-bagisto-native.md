@@ -22,28 +22,41 @@ While officially optimized for Bagisto eCommerce, **Bagisto Native works with AN
 ### The Universal Three-Layer System
 
 ```mermaid
+%%{init: {
+  "theme": "neutral",
+  "flowchart": {
+    "nodeSpacing": 80,
+    "rankSpacing": 100,
+    "padding": 30,
+    "useMaxWidth": false,
+    "htmlLabels": true
+  }
+}}%%
+
 graph TB
-    subgraph Backend["Backend Layer - Your Choice"]
-        API[Any Backend Technology<br/>REST / GraphQL / Custom APIs<br/>Node.js, Python, PHP, Java, .NET, Go<br/>Firebase, Supabase, Custom Services]
+
+    subgraph Backend["Backend Layer – Your Choice"]
+        API["Any Backend Technology<br/><br/>REST / GraphQL / Custom APIs<br/><br/>Node.js • Python • PHP • Java • .NET • Go<br/>Firebase • Supabase • Custom Services"]
     end
     
     subgraph WebLayer["Web Application Layer"]
-        WebApp[Your Next.js / React App<br/>@bagisto-native/core<br/>@bagisto-native/react<br/>Bridge Components]
+        WebApp["Your Next.js / React App<br/>@bagisto-native/core<br/>@bagisto-native/react<br/><br/> "]
     end
     
     subgraph NativeLayer["Native Mobile Layer"]
-        iOS[iOS App<br/>Swift + WebView]
-        Android[Android App<br/>Kotlin + WebView]
+        iOS["iOS App<br/>Swift + WebView"]
+        Android["Android App<br/>Kotlin + WebView"]
     end
     
-    API -->|API Calls<br/>HTTP/GraphQL/etc| WebApp
+    API -->|API Calls<br/>HTTP / GraphQL / etc| WebApp
     WebApp -->|Hotwire Bridge| iOS
     WebApp -->|Hotwire Bridge| Android
-    
-    style API fill:#e1f5ff
-    style WebApp fill:#fff4e6
-    style iOS fill:#f3e5f5
-    style Android fill:#e8f5e9
+
+    %% Soft neutral colors that work on both light & dark backgrounds
+    style API fill:#dbeafe,stroke:#2563eb,color:#111827
+    style WebApp fill:#ede9fe,stroke:#7c3aed,color:#111827
+    style iOS fill:#d1fae5,stroke:#059669,color:#111827
+    style Android fill:#ffedd5,stroke:#ea580c,color:#111827
 ```
 
 ### Data Flow Architecture
@@ -193,12 +206,12 @@ flowchart LR
 graph LR
     BN[Bagisto Native] --> WebApp[Web Application<br/>Next.js/React]
     
-    WebApp --> REST[REST APIs<br/>Express, Django, Rails<br/>ASP.NET, Spring Boot]
-    WebApp --> GraphQL[GraphQL APIs<br/>Apollo, Hasura<br/>PostGraphile, Prisma]
-    WebApp --> BaaS[Backend as a Service<br/>Firebase, Supabase<br/>AWS Amplify]
-    WebApp --> CMS[Headless CMS<br/>Contentful, Strapi<br/>Sanity, WordPress]
-    WebApp --> Ecommerce[E-commerce APIs<br/>Shopify, WooCommerce<br/>Magento, BigCommerce]
-    WebApp --> Custom[Custom APIs<br/>Microservices<br/>Legacy Systems, SOAP]
+    WebApp --> REST[REST APIs<br/>Express, Django, Rails<br/>ASP.NET, Spring Boot<br><br/> ]
+    WebApp --> GraphQL[GraphQL APIs<br/>Apollo, Hasura<br/>PostGraphile, Prisma<br><br/> ]
+    WebApp --> BaaS[Backend as a Service<br/>Firebase, Supabase<br/>AWS Amplify<br><br/> ]
+    WebApp --> CMS[Headless CMS<br/>Contentful, Strapi<br/>Sanity, WordPress<br><br/> ]
+    WebApp --> Ecommerce[E-commerce APIs<br/>Shopify, WooCommerce<br/>Magento, BigCommerce<br><br/> ]
+    WebApp --> Custom[Custom APIs<br/>Microservices<br/>Legacy Systems, SOAP<br><br/> ]
     
     style BN fill:#4caf50
     style WebApp fill:#2196f3
@@ -831,7 +844,7 @@ flowchart TD
     
     Start -->|No| End1[Continue Web Only]
     
-    BN --> Benefits[Benefits:<br/>- Fast Development<br/>- Low Cost<br/>- Easy Maintenance<br/>- Works with Any API]
+    BN --> Benefits[Benefits:<br/>- Fast Development<br/>- Low Cost<br/>- Easy Maintenance<br/>- Works with Any API<br><br/> ]
     
     WebApp -->|Need Platform-Specific| Custom{Budget Available?}
     Custom -->|Yes| Native[Build Native Apps]
