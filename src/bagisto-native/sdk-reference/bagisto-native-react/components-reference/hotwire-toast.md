@@ -31,6 +31,29 @@ import { triggerHotwireNativeToast } from "@bagisto-native/core";
 triggerHotwireNativeToast("Item added to cart successfully!");
 ```
 
+## Ready Event & Race Conditions
+
+To ensure that the component is fully connected and ready to receive messages, you can listen for the `bagisto-native:toast-ready` event. This is particularly useful for solving race conditions where you might try to trigger a toast before the Web Component has finished initialization.
+
+| Event Name | Frequency | Description |
+| :--- | :--- | :--- |
+| `bagisto-native:toast-ready` | Dispatched once | Dispatched once the component connects and is ready. |
+
+### Example: Handling Race Conditions
+
+```ts
+window.addEventListener('bagisto-native:toast-ready', () => {
+    console.log("Hotwire Toast is ready!");
+    // Safe to trigger toasts now
+});
+```
+
+::: warning Singleton
+You should only have one instance of `<hotwire-toast>` in your DOM at any time.
+:::
+
+You can also check the sample repo [here](https://github.com/anikeshwebkul/bagisto-native-commerce).
+
 ## Next Steps
 
 - Explore [HotwireSearch](./hotwire-search.md)

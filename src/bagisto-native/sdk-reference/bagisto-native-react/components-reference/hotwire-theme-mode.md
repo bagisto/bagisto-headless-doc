@@ -36,6 +36,18 @@ function toggleTheme(newMode: 'light' | 'dark') {
 }
 ```
 
+---
+## Ready Event & Race Conditions
+
+Listen for the `bagisto-native:theme-mode-ready` event to ensure the bridge is ready.
+
+| Event Name | Frequency | Description |
+| :--- | :--- | :--- |
+| `bagisto-native:theme-mode-ready` | Dispatched once | Dispatched once the component connects and is ready. |
+
+---
+You can also check the sample repo [here](https://github.com/anikeshwebkul/bagisto-native-commerce).
+
 ## Next Steps
 
 - Learn about [App-level Providers](../common-integration-patterns/app-level-providers.md)

@@ -53,6 +53,19 @@ export default function TurboSearchBridge() {
 }
 ```
 
+---
+## Ready Event & Race Conditions
+
+To ensure the search bridge is ready, listen for the `bagisto-native:search-ready` event.
+
+| Event Name | Frequency | Description |
+| :--- | :--- | :--- |
+| `bagisto-native:search-ready` | Dispatched once | Dispatched once the component connects and is ready. |
+
+---
+You can also check the sample repo [here](https://github.com/anikeshwebkul/bagisto-native-commerce).
+
+
 ## Next Steps
 
 - Explore [HotwireLocation](./hotwire-location.md)

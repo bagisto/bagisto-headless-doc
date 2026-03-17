@@ -948,6 +948,113 @@ export default withMermaid(
                     },
                   ]
                 },
+                // Android Integration
+                {
+                  text: "Integration with Android App",
+                  collapsed: true,
+                  items: [
+                    { text: "Introduction", link: "/bagisto-native/native-integration/android/introduction.md" },
+                    { text: "Hotwire vs. Native", link: "/bagisto-native/native-integration/android/hotwire-vs-native.md" },
+                    { text: "Integration Guide", link: "/bagisto-native/native-integration/android/index.md" },
+                    {
+                      text: "Base URL Configuration",
+                      collapsed: true,
+                      items: [
+                        { text: "Where to Set", link: "/bagisto-native/native-integration/android/base-url-configuration/where-to-set.md" },
+                        { text: "Common Mistakes", link: "/bagisto-native/native-integration/android/base-url-configuration/common-mistakes.md" },
+                        { text: "Environment Switching", link: "/bagisto-native/native-integration/android/base-url-configuration/environment-switching.md" },
+                      ]
+                    },
+                    {
+                      text: "Build & Run",
+                      collapsed: true,
+                      items: [
+                        { text: "How to Run", link: "/bagisto-native/native-integration/android/build-and-run/how-to-run.md" },
+                        { text: "First Launch Checklist", link: "/bagisto-native/native-integration/android/build-and-run/first-launch-checklist.md" },
+                        { text: "Debugging Basics", link: "/bagisto-native/native-integration/android/build-and-run/debugging-basics.md" },
+                      ]
+                    },
+                    {
+                      text: "Bridge Components",
+                      collapsed: true,
+                      items: [
+                        { text: "Overview", link: "/bagisto-native/native-integration/android/bridge-components/overview.md" },
+                        { text: "Component Registration", link: "/bagisto-native/native-integration/android/bridge-components/registration.md" },
+                        {
+                          text: "Available Components",
+                          collapsed: true,
+                          items: [
+                            { text: "Alert", link: "/bagisto-native/native-integration/android/bridge-components/alert.md" },
+                            { text: "Barcode Scanner", link: "/bagisto-native/native-integration/android/bridge-components/barcode-scanner.md" },
+                            { text: "Button", link: "/bagisto-native/native-integration/android/bridge-components/button.md" },
+                            { text: "Download File", link: "/bagisto-native/native-integration/android/bridge-components/download-file.md" },
+                            { text: "Form", link: "/bagisto-native/native-integration/android/bridge-components/form.md" },
+                            { text: "Haptic", link: "/bagisto-native/native-integration/android/bridge-components/haptic.md" },
+                            { text: "Image Search", link: "/bagisto-native/native-integration/android/bridge-components/image-search.md" },
+                            { text: "Location", link: "/bagisto-native/native-integration/android/bridge-components/location.md" },
+                            { text: "Menu", link: "/bagisto-native/native-integration/android/bridge-components/menu.md" },
+                            { text: "Navigation History", link: "/bagisto-native/native-integration/android/bridge-components/navigation-history.md" },
+                            { text: "Review Prompt", link: "/bagisto-native/native-integration/android/bridge-components/review-prompt.md" },
+                            { text: "Search", link: "/bagisto-native/native-integration/android/bridge-components/search.md" },
+                            { text: "Share", link: "/bagisto-native/native-integration/android/bridge-components/share.md" },
+                            { text: "Theme", link: "/bagisto-native/native-integration/android/bridge-components/theme.md" },
+                            { text: "Theme Mode", link: "/bagisto-native/native-integration/android/bridge-components/theme-mode.md" },
+                            { text: "Toast", link: "/bagisto-native/native-integration/android/bridge-components/toast.md" },
+                            { text: "NavBar Button", link: "/bagisto-native/native-integration/android/bridge-components/navbar-button.md" },
+                            { text: "Logout", link: "/bagisto-native/native-integration/android/bridge-components/logout.md" },
+                          ]
+                        },
+                      ],
+                    },
+                    {
+                      text: "Project URL Concept",
+                      collapsed: true,
+                      items: [
+                        { text: "What is Project URL", link: "/bagisto-native/native-integration/android/project-url-concept/what-is-project-url.md" },
+                        { text: "Local vs Production URLs", link: "/bagisto-native/native-integration/android/project-url-concept/local-vs-production-urls.md" },
+                        { text: "Network Considerations", link: "/bagisto-native/native-integration/android/project-url-concept/network-considerations.md" },
+                      ]
+                    },
+                    {
+                      text: "Android App Setup",
+                      collapsed: true,
+                      items: [
+                        { text: "Repository Overview", link: "/bagisto-native/native-integration/android/android-app-setup/repository-overview.md" },
+                        { text: "Project Structure", link: "/bagisto-native/native-integration/android/android-app-setup/project-structure.md" },
+                        { text: "Android Studio Setup", link: "/bagisto-native/native-integration/android/android-app-setup/android-studio-setup.md" },
+                        { text: "Configuration Example", link: "/bagisto-native/native-integration/android/android-app-setup/configuration-example.md" },
+                        { text: "Simulator vs Device", link: "/bagisto-native/native-integration/android/android-app-setup/simulator-vs-device.md" },
+                      ]
+                    },
+                    {
+                      text: "How-to Guides",
+                      collapsed: true,
+                      items: [
+                        { text: "Install Android Studio", link: "/bagisto-native/native-integration/android/how-to-guides/install-android-studio.md" },
+                        { text: "Create Android Project", link: "/bagisto-native/native-integration/android/how-to-guides/create-android-project.md" },
+                        { text: "Add Gradle Dependency", link: "/bagisto-native/native-integration/android/how-to-guides/add-gradle-dependency.md" },
+                        { text: "Use Library", link: "/bagisto-native/native-integration/android/how-to-guides/use-library.md" },
+                        { text: "Build Release APK", link: "/bagisto-native/native-integration/android/how-to-guides/build-release-apk.md" },
+                        { text: "Google Play Setup", link: "/bagisto-native/native-integration/android/how-to-guides/google-play-setup.md" },
+                        { text: "Adding Native Components", link: "/bagisto-native/native-integration/android/how-to-guides/adding-native-components.md" },
+                        { text: "Implementing Navigation", link: "/bagisto-native/native-integration/android/how-to-guides/implementing-navigation.md" },
+                        { text: "Handling Deep Links", link: "/bagisto-native/native-integration/android/how-to-guides/handling-deep-links.md" },
+                        { text: "Customizing WebView", link: "/bagisto-native/native-integration/android/how-to-guides/customizing-webview.md" },
+                        { text: "Testing Your App", link: "/bagisto-native/native-integration/android/how-to-guides/testing-app.md" },
+                        { text: "Publishing to Play Store", link: "/bagisto-native/native-integration/android/how-to-guides/publishing-to-play-store.md" },
+                        { text: "Debugging Common Issues", link: "/bagisto-native/native-integration/android/how-to-guides/debugging-common-issues.md" },
+                        { text: "Performance Optimization", link: "/bagisto-native/native-integration/android/how-to-guides/performance-optimization.md" },
+                      ]
+                    },
+                    {
+                      text: "Verifying Native-Web Communication",
+                      collapsed: true,
+                      items: [
+                        { text: "Communication Testing", link: "/bagisto-native/native-integration/android/verifying-native-web-communication.md" },
+                      ]
+                    },
+                  ]
+                },
               ],
             },
 

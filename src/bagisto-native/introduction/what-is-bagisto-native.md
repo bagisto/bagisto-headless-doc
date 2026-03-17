@@ -5,7 +5,7 @@
 ### Definition
 Bagisto Native is a framework that enables you to build native mobile applications using your existing Next.js/React.js web projects through Hotwire technology, without needing to rebuild everything from scratch in Swift or Kotlin.
 
-You can check the [iOS App Demo](https://apps.apple.com/us/app/bagisto-native-commerce/id6758929341) here.
+You can check the [iOS App Demo](https://apps.apple.com/us/app/bagisto-native-commerce/id6758929341) and [Android App Demo](https://play.google.com/store/apps/details?id=com.mobikul.bagistoandroidrunner) here.
 
 ### Universal Compatibility
 While officially optimized for Bagisto eCommerce, **Bagisto Native works with ANY backend API** including:
@@ -30,7 +30,7 @@ While officially optimized for Bagisto eCommerce, **Bagisto Native works with AN
     "nodeSpacing": 80,
     "rankSpacing": 100,
     "padding": 30,
-    "useMaxWidth": false,
+    "useMaxWidth": true,
     "htmlLabels": true
   }
 }}%%

@@ -2,6 +2,9 @@
 
 While most Next.js and React developers should prefer the `@bagisto-native/react` wrapper package, there are specific scenarios where using `@bagisto-native/core` directly is the better or necessary choice.
 
+This is the core of the Bagisto Native framework, which is used to create wrappers for various tech stacks, such as React, Vue, Angular, Svelte, and more. 
+Kindly refer to the bagisto-native/react documentation for integrating with React/Next.js projects.
+
 ## 1. Non-React Environments
 
 If you are building your storefront using **Vue.js**, **Angular**, **Svelte**, or **Vanilla JavaScript**, you cannot use the React wrappers. In these cases, you must use the Core package.

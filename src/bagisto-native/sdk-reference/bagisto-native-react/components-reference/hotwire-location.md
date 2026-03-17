@@ -82,6 +82,10 @@ useEffect(() => {
 | :--- | :--- |
 | `bagisto-native:location-component-ready` | Emitted when the bridge component is initialized. |
 
+---
+You can also check the sample repo [here](https://github.com/anikeshwebkul/bagisto-native-commerce).
+
+
 ## Next Steps
 
 - Explore [HotwireHistorySync](./hotwire-history-sync.md)

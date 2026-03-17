@@ -21,7 +21,7 @@ Bagisto Native provides a complete ecosystem for building native mobile applicat
     "nodeSpacing": 50,
     "rankSpacing": 70,
     "padding": 20,
-    "useMaxWidth": false
+    "useMaxWidth": true
   }
 }}%%
 

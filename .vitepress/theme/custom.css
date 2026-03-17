@@ -69,3 +69,16 @@
     margin-top: 40px;
   }
 }
+
+/* Mermaid responsiveness */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
