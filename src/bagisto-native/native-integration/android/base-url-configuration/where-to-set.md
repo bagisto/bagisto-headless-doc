@@ -29,7 +29,7 @@ class MainActivity : HotwireActivity() {
     override fun navigatorConfigurations() = listOf(
         NavigatorConfiguration(
             name = "main",
-            startLocation = "https://your-store.myshopify.com"
+            startLocation = "https://your-store.bagisto.com"
         )
     )
 }
